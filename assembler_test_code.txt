@@ -1,0 +1,48 @@
+PC: 0x403048bc
+
+
+(gdb) disas 0x40304888, 0x403048f0
+Dump of assembler code from 0x40304888 to 0x403048f0:
+   0x40304888:	b.n	0x4030458a
+   0x4030488a:	mov.w	r10, #0
+   0x4030488e:	mov	r6, r10
+   0x40304890:	movs	r3, #1
+   0x40304892:	mov.w	r8, #0
+   0x40304896:	str	r3, [sp, #16]
+   0x40304898:	b.n	0x403044ce
+   0x4030489a:	addw	sp, sp, #2536	; 0x9e8
+   0x4030489e:	ldmia.w	sp!, {r4, r5, r6, r7, r8, r10, r11, pc}
+   0x403048a2:	nop
+   0x403048a4:	lsls	r0, r0, #2
+   0x403048a6:	strh	r2, [r4, #4]
+   0x403048a8:	strh	r0, [r1, #24]
+   0x403048aa:	ands	r0, r6
+   0x403048ac:	strh	r2, [r3, #24]
+   0x403048ae:	ands	r0, r6
+   0x403048b0:	strh	r1, [r6, #12]
+   0x403048b2:	ands	r0, r6
+   0x403048b4:			; <UNDEFINED> instruction: 0xfff00fff
+   0x403048b8:	mov.w	r3, #16384	; 0x4000
+=> 0x403048bc:	subs	r3, #1
+   0x403048be:	beq.n	0x403048c2
+   0x403048c0:	b.n	0x403048bc
+   0x403048c2:	bx	lr
+   0x403048c4:	stmdb	sp!, {r4, r5, r6, r7, r8, r10, r11, lr}
+   0x403048c8:	mov	r5, r1
+   0x403048ca:	ldr	r2, [pc, #284]	; (0x403049e8)
+   0x403048cc:	sub	sp, #408	; 0x198
+   0x403048ce:	ldr	r1, [pc, #284]	; (0x403049ec)
+   0x403048d0:	movs	r3, #0
+   0x403048d2:	mov	r6, r0
+   0x403048d4:	str	r3, [sp, #12]
+   0x403048d6:	str	r3, [sp, #16]
+   0x403048d8:	adds	r1, #20
+   0x403048da:	ldr	r2, [r2, #0]
+   0x403048dc:	ldr.w	r4, [r1, #-20]
+   0x403048e0:	ldr.w	r0, [r1, #-4]
+   0x403048e4:	ldr	r1, [r1, #0]
+   0x403048e6:	eors	r2, r4
+   0x403048e8:	ldr.w	lr, [pc, #284]	; 0x40304a08
+   0x403048ec:	mla	r4, r0, r1, r2
+End of assembler dump.
+
