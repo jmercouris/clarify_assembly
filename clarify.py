@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 
+# Simple string matching, does not consider substring issues, e.g. str vs strh
 def main():
     # Pipe in Data
     data = sys.stdin.readlines()
@@ -14,15 +15,7 @@ def main():
                 # Break loop to avoid second instance of matching command
                 break
 
-
-
-
-def auxiliary():
-    for operation in get_instruction_set():
-        print operation[1]
-        # End Auxiliary Method
-        return 0
-
+# Incomplete instruction set, does not consider thumb, arguments etc
 def get_instruction_set():
     instruction_set = [("WFS", "Write FP status register"),
                        ("ADC", "Add with carry"),
